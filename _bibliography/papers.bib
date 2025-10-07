@@ -1,115 +1,56 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{hong2025unlabeled,
+  abbr={NeurIPS 2025},
+  title={Unlabeled Data Improves Fine-Grained Image Zero-shot Classification with Multimodal LLMs},
+  author={Hong, Yunqi and An, Sohyun and Bai, Andrew and Lin, Neil YC and Hsieh, Cho-Jui},
+  journal={Advances in Neural Information Processing Systems},
+  pdf={https://arxiv.org/pdf/2506.03195},
+  code="https://github.com/yq-hong/AutoSEP",
+  year={2025},
+  preview={black_cuckoo.png},
+  abstract={Despite Multimodal Large Language Models (MLLMs) showing promising results on general zero-shot image classification tasks, fine-grained image classification remains challenging. It demands precise attention to subtle visual details to distinguish between visually similar subcategories--details that MLLMs may easily overlook without explicit guidance. To address this, we introduce AutoSEP, an iterative self-supervised prompt learning framework designed to enhance MLLM fine-grained classification capabilities in a fully unsupervised manner. Our core idea is to leverage unlabeled data to learn a description prompt that guides MLLMs in identifying crucial discriminative features within an image, and boosts classification accuracy. We developed an automatic self-enhancing prompt learning framework called AutoSEP to iteratively improve the description prompt using unlabeled data, based on instance-level classification scoring function. AutoSEP only requires black-box access to MLLMs, eliminating the need for any training or fine-tuning. We evaluate our approach on multiple fine-grained classification datasets. It consistently outperforms other unsupervised baselines, demonstrating the effectiveness of our self-supervised optimization framework. Notably, AutoSEP on average improves 13 percent over standard zero-shot classification and 5 percent over the best-performing baselines.},
+  selected={true}
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@article{chen2025iris,
+  abbr={Preprint},
+  title={IRIS: Intrinsic Reward Image Synthesis},
+  author={Chen, Yihang and Ban, Yuanhao and Hong, Yunqi and Hsieh, Cho-Jui},
+  journal={arXiv preprint arXiv:2509.25562},
+  pdf={https://arxiv.org/pdf/2509.25562},
+  year={2025},
+  preview={intro.png},
+  abstract={Despite the success of Reinforcement Learning from Human Feedback (RLHF) in language reasoning, its application to autoregressive Text-to-Image (T2I) generation is often constrained by the limited availability of human preference data. This paper explores how an autoregressive T2I model can learn from internal signals without relying on external rewards or labeled data. Contrary to recent findings in text generation, we show that maximizing self-uncertainty, rather than self-certainty, improves image generation. We observe that this is because autoregressive T2I models with low uncertainty tend to generate simple and uniform images, which are less aligned with human preferences. Based on these observations, we propose IRIS (Intrinsic Reward Image Synthesis), the first framework to improve autoregressive T2I models with reinforcement learning using only an intrinsic reward. Empirical results demonstrate that applying IRIS to autoregressive T2I models achieves performance that is competitive with or superior to external rewards.},
+  selected={true}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@article{ye2022graph,
+  title={Graph neural diffusion networks for semi-supervised learning},
+  author={Ye, Wei and Huang, Zexi and Hong, Yunqi and Singh, Ambuj},
+  journal={arXiv preprint arXiv:2201.09698},
+  pdf={https://arxiv.org/pdf/2201.09698},
+  year={2022},
+  abstract={Graph Convolutional Networks (GCN) is a pioneering model for graph-based semi-supervised learning. However, GCN does not perform well on sparsely-labeled graphs. Its two-layer version cannot effectively propagate the label information to the whole graph structure (i.e., the under-smoothing problem) while its deep version over-smoothens and is hard to train (i.e., the over-smoothing problem). To solve these two issues, we propose a new graph neural network called GND-Nets (for Graph Neural Diffusion Networks) that exploits the local and global neighborhood information of a vertex in a single layer. Exploiting the shallow network mitigates the over-smoothing problem while exploiting the local and global neighborhood information mitigates the under-smoothing problem. The utilization of the local and global neighborhood information of a vertex is achieved by a new graph diffusion method called neural diffusions, which integrate neural networks into the conventional linear and nonlinear graph diffusions. The adoption of neural networks makes neural diffusions adaptable to different datasets. Extensive experiments on various sparsely-labeled graphs verify the effectiveness and efficiency of GND-Nets compared to state-of-the-art approaches.},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@article{hongegala,
+  title={EGALA: Efficient Gradient Approximation for Large-scale Graph Adversarial Attack},
+  author={Hong, Yunqi and Hsieh, Cho-Jui},
+  pdf={https://openreview.net/pdf?id=Yd7idEYzNv},
+  year={2023},
+  abstract={Graph Neural Networks (GNNs) have emerged as powerful tools for graph representation learning. However, their vulnerability to adversarial attacks underscores the importance of gaining a deeper understanding of techniques in graph adversarial attacks. Existing attack methods have demonstrated that it is possible to deteriorate the predictions of GNNs by injecting a small number of edges, but they often suffer from poor scalability due to the need of computing/storing gradients on a quadratic number of entries in the adjacency matrix. In this paper, we propose EGALA, a novel approach for conducting large-scale graph adversarial attacks. By showing the derivative of linear graph neural networks can be approximated by the inner product of two matrices, EGALA leverages efficient Approximate Nearest Neighbor Search (ANNS) techniques to identify entries with dominant gradients in sublinear time, offering superior attack capabilities, reduced memory and time consumption, and enhanced scalability. We conducted comprehensive experiments across various datasets to demonstrate the outstanding performance of our model compared with the state-of-the-art methods.},
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@inproceedings{hong2023enhanced,
+  title={Enhanced Sequential Recommendation with Self-Attention and Graph Collaborative Features},
+  author={Hong, Yunqi and Ye, Wei},
+  booktitle={2023 IEEE International Conference on Data Mining Workshops (ICDMW)},
+  pages={1493--1499},
+  year={2023},
+  html={https://ieeexplore.ieee.org/document/10411506},
+  pdf={https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10411506},
+  abstract={Recommender systems have gained significant popularity in recent years, with research focusing on three main branches: sequential recommendation, graph-based recommendation, and review-based recommendation. These branches leverage different data modalities to provide personalized recommendations. However, these individual modalities have their own biases and limitations, making it challenging to fully capture user preferences and item relations. Naive modality combination methods often face compatibility issues, leading to suboptimal performance. In this work, we propose a comprehensive model called RSSG (Review-enhanced Sequential recommendation with Self-attention and Graph collaborative features) to address this challenge. Our model finely integrates all three data modalities to provide more accurate and personalized recommendations. We utilize a language model to capture textual representations of users and items, as well as user-item attention weights. With shared user and item representations, we employ a time-interval aware self-attention mechanism to capture long-term user behavior patterns, and leverage graph attention networks to capture collaborative information between users and items. Finally, we fuse the sequential and collaborative features to make predictions. We conduct extensive experiments on various datasets to evaluate the performance of our proposed method. The experimental results demonstrate significant performance gains compared to state-of-the-art methods. Our approach effectively leverages the strengths of different data modalities, enabling more accurate and personalized recommendations for users.},
+  organization={IEEE}
 }
