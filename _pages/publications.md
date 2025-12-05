@@ -15,6 +15,8 @@ nav_order: 1
 
 <div class="publications">
 
+<p>Please see my <a href="https://scholar.google.com/citations?hl=en&user=moSZIuEAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> for up-to-date works and arXiv papers. </p>
+
 {% bibliography %}
 
 </div>
