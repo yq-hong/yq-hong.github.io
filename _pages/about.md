@@ -38,4 +38,4 @@ My research focuses on LLM post-training, inferencing, and downstream applicatio
 
 I also collaborate with [Prof. Neil Y.C. Lin](https://www.linlab.seas.ucla.edu/) on developing LLM-driven methods for biomedical research.
 
-I’m actively looking for research internships for Summer 2026. Feel free to reach out if you are interested.
+🙌 I’m actively looking for research internships for Summer 2026. Feel free to reach out if you are interested.
