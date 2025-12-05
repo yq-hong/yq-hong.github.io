@@ -7,7 +7,7 @@
   author={Hong, Yunqi and An, Sohyun and Bai, Andrew and Lin, Neil YC and Hsieh, Cho-Jui},
   journal={Advances in Neural Information Processing Systems},
   pdf={https://arxiv.org/pdf/2506.03195},
-  code="https://github.com/yq-hong/AutoSEP",
+  code={https://github.com/yq-hong/AutoSEP},
   year={2025},
   preview={black_cuckoo.png},
   abstract={Despite Multimodal Large Language Models (MLLMs) showing promising results on general zero-shot image classification tasks, fine-grained image classification remains challenging. It demands precise attention to subtle visual details to distinguish between visually similar subcategories--details that MLLMs may easily overlook without explicit guidance. To address this, we introduce AutoSEP, an iterative self-supervised prompt learning framework designed to enhance MLLM fine-grained classification capabilities in a fully unsupervised manner. Our core idea is to leverage unlabeled data to learn a description prompt that guides MLLMs in identifying crucial discriminative features within an image, and boosts classification accuracy. We developed an automatic self-enhancing prompt learning framework called AutoSEP to iteratively improve the description prompt using unlabeled data, based on instance-level classification scoring function. AutoSEP only requires black-box access to MLLMs, eliminating the need for any training or fine-tuning. We evaluate our approach on multiple fine-grained classification datasets. It consistently outperforms other unsupervised baselines, demonstrating the effectiveness of our self-supervised optimization framework. Notably, AutoSEP on average improves 13 percent over standard zero-shot classification and 5 percent over the best-performing baselines.},
@@ -32,10 +32,10 @@
   author={Hong, Yunqi and Kao, Johnson and Edwards, Liam and Liu, Nein-Tzu and Huang, Chung-Yen and Oliveira-Kowaleski, Alex and Hsieh, Cho-Jui and Lin, Neil YC},
   journal={arXiv preprint arXiv:2511.12008},
   pdf={https://arxiv.org/pdf/2511.12008},
-  code="https://github.com/yq-hong/RECAP-PATH",
+  code={https://github.com/yq-hong/RECAP-PATH},
   year={2025},
   preview={pathology.png},
-  abstract={AI tools in pathology have improved screening throughput, standardized quantification, and revealed prognostic patterns that inform treatment. However, adoption remains limited because most systems still lack the human-readable reasoning needed to audit decisions and prevent errors. We present RECAP-PATH, an interpretable framework that establishes a self-learning paradigm, shifting off-the-shelf multimodal large language models from passive pattern recognition to evidence-linked diagnostic reasoning. At its core is a two-phase learning process that autonomously derives diagnostic criteria: diversification expands pathology-style explanations, while optimization refines them for accuracy. This self-learning approach requires only small labeled sets and no white-box access or weight updates to generate cancer diagnoses. Evaluated on breast and prostate datasets, RECAP-PATH produced rationales aligned with expert assessment and delivered substantial gains in diagnostic accuracy over baselines. By uniting visual understanding with reasoning, RECAP-PATH provides clinically trustworthy AI and demonstrates a generalizable path toward evidence-linked interpretation.}
+  abstract={AI tools in pathology have improved screening throughput, standardized quantification, and revealed prognostic patterns that inform treatment. However, adoption remains limited because most systems still lack the human-readable reasoning needed to audit decisions and prevent errors. We present RECAP-PATH, an interpretable framework that establishes a self-learning paradigm, shifting off-the-shelf multimodal large language models from passive pattern recognition to evidence-linked diagnostic reasoning. At its core is a two-phase learning process that autonomously derives diagnostic criteria: diversification expands pathology-style explanations, while optimization refines them for accuracy. This self-learning approach requires only small labeled sets and no white-box access or weight updates to generate cancer diagnoses. Evaluated on breast and prostate datasets, RECAP-PATH produced rationales aligned with expert assessment and delivered substantial gains in diagnostic accuracy over baselines. By uniting visual understanding with reasoning, RECAP-PATH provides clinically trustworthy AI and demonstrates a generalizable path toward evidence-linked interpretation.},
   selected={true}
 }
 
@@ -46,7 +46,7 @@
   booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
   pages={28433--28448},
   pdf={https://arxiv.org/pdf/2511.03206},
-  code="https://github.com/johnsonkao0213/QG-CoC",
+  code={https://github.com/johnsonkao0213/QG-CoC},
   year={2025},
   html={https://johnsonkao0213.github.io/QG-CoC/},
   preview={qgcoc_pipeline.png},
@@ -60,7 +60,7 @@
   author={Yang, Kai-Wen K and Bai, Andrew and Bermudez, Alexandra and Hong, Yunqi and Latham, Zoe and Sloan, Iris and Liu, Michael and Goyal, Vishrut and Hsieh, Cho-Jui and Lin, Neil YC},
   journal={arXiv preprint arXiv:2511.12006},
   pdf={https://arxiv.org/pdf/2511.12006},
-  code="https://github.com/kaiwentw1018/SIT-ADDA",
+  code={https://github.com/kaiwentw1018/SIT-ADDA},
   year={2025},
   preview={adda.png},
   abstract={Deep learning is transforming microscopy, yet models often fail when applied to images from new instruments or acquisition settings. Conventional adversarial domain adaptation (ADDA) retrains entire networks, often disrupting learned semantic representations. Here, we overturn this paradigm by showing that adapting only the earliest convolutional layers, while freezing deeper layers, yields reliable transfer. Building on this principle, we introduce Subnetwork Image Translation ADDA with automatic depth selection (SIT-ADDA-Auto), a self-configuring framework that integrates shallow-layer adversarial alignment with predictive uncertainty to automatically select adaptation depth without target labels. We demonstrate robustness via multi-metric evaluation, blinded expert assessment, and uncertainty-depth ablations. Across exposure and illumination shifts, cross-instrument transfer, and multiple stains, SIT-ADDA improves reconstruction and downstream segmentation over full-encoder adaptation and non-adversarial baselines, with reduced drift of semantic features. Our results provide a design rule for label-free adaptation in microscopy and a recipe for field settings; the code is publicly available.}
