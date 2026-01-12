@@ -1,6 +1,18 @@
 ---
 ---
 
+@article{hong2026understanding,
+  abbr={Preprint},
+  title={Understanding Reward Hacking in Text-to-Image Reinforcement Learning},
+  author={Hong, Yunqi and Kao, Kuei-Chun and Zhou, Hengguang and Hsieh, Cho-Jui},
+  journal={arXiv preprint arXiv:2601.03468},
+  pdf={https://arxiv.org/pdf/2601.03468},
+  year={2026},
+  preview={t2i_reward.png},
+  abstract={Reinforcement learning (RL) has become a standard approach for post-training large language models and, more recently, for improving image generation models, which uses reward functions to enhance generation quality and human preference alignment. However, existing reward designs are often imperfect proxies for true human judgment, making models prone to reward hacking--producing unrealistic or low-quality images that nevertheless achieve high reward scores. In this work, we systematically analyze reward hacking behaviors in text-to-image (T2I) RL post-training. We investigate how both aesthetic/human preference rewards and prompt-image consistency rewards individually contribute to reward hacking and further show that ensembling multiple rewards can only partially mitigate this issue. Across diverse reward models, we identify a common failure mode: the generation of artifact-prone images. To address this, we propose a lightweight and adaptive artifact reward model, trained on a small curated dataset of artifact-free and artifact-containing samples. This model can be integrated into existing RL pipelines as an effective regularizer for commonly used reward models. Experiments demonstrate that incorporating our artifact reward significantly improves visual realism and reduces reward hacking across multiple T2I RL setups, demonstrating the effectiveness of lightweight reward augment serving as a safeguard against reward hacking.},
+  selected={true}
+}
+
 @article{hong2025unlabeled,
   abbr={NeurIPS 2025},
   title={Unlabeled Data Improves Fine-Grained Image Zero-shot Classification with Multimodal LLMs},
@@ -11,6 +23,19 @@
   year={2025},
   preview={black_cuckoo.png},
   abstract={Despite Multimodal Large Language Models (MLLMs) showing promising results on general zero-shot image classification tasks, fine-grained image classification remains challenging. It demands precise attention to subtle visual details to distinguish between visually similar subcategories--details that MLLMs may easily overlook without explicit guidance. To address this, we introduce AutoSEP, an iterative self-supervised prompt learning framework designed to enhance MLLM fine-grained classification capabilities in a fully unsupervised manner. Our core idea is to leverage unlabeled data to learn a description prompt that guides MLLMs in identifying crucial discriminative features within an image, and boosts classification accuracy. We developed an automatic self-enhancing prompt learning framework called AutoSEP to iteratively improve the description prompt using unlabeled data, based on instance-level classification scoring function. AutoSEP only requires black-box access to MLLMs, eliminating the need for any training or fine-tuning. We evaluate our approach on multiple fine-grained classification datasets. It consistently outperforms other unsupervised baselines, demonstrating the effectiveness of our self-supervised optimization framework. Notably, AutoSEP on average improves 13 percent over standard zero-shot classification and 5 percent over the best-performing baselines.},
+  selected={true}
+}
+
+@article{hong2025adaptive,
+  abbr={Preprint},
+  title={Adaptive Diagnostic Reasoning Framework for Pathology with Multimodal Large Language Models},
+  author={Hong, Yunqi and Kao, Johnson and Edwards, Liam and Liu, Nein-Tzu and Huang, Chung-Yen and Oliveira-Kowaleski, Alex and Hsieh, Cho-Jui and Lin, Neil YC},
+  journal={arXiv preprint arXiv:2511.12008},
+  pdf={https://arxiv.org/pdf/2511.12008},
+  code={https://github.com/yq-hong/RECAP-PATH},
+  year={2025},
+  preview={pathology.png},
+  abstract={AI tools in pathology have improved screening throughput, standardized quantification, and revealed prognostic patterns that inform treatment. However, adoption remains limited because most systems still lack the human-readable reasoning needed to audit decisions and prevent errors. We present RECAP-PATH, an interpretable framework that establishes a self-learning paradigm, shifting off-the-shelf multimodal large language models from passive pattern recognition to evidence-linked diagnostic reasoning. At its core is a two-phase learning process that autonomously derives diagnostic criteria: diversification expands pathology-style explanations, while optimization refines them for accuracy. This self-learning approach requires only small labeled sets and no white-box access or weight updates to generate cancer diagnoses. Evaluated on breast and prostate datasets, RECAP-PATH produced rationales aligned with expert assessment and delivered substantial gains in diagnostic accuracy over baselines. By uniting visual understanding with reasoning, RECAP-PATH provides clinically trustworthy AI and demonstrates a generalizable path toward evidence-linked interpretation.},
   selected={true}
 }
 
@@ -26,16 +51,15 @@
   selected={true}
 }
 
-@article{hong2025adaptive,
+@article{xie2025distance,
   abbr={Preprint},
-  title={Adaptive Diagnostic Reasoning Framework for Pathology with Multimodal Large Language Models},
-  author={Hong, Yunqi and Kao, Johnson and Edwards, Liam and Liu, Nein-Tzu and Huang, Chung-Yen and Oliveira-Kowaleski, Alex and Hsieh, Cho-Jui and Lin, Neil YC},
-  journal={arXiv preprint arXiv:2511.12008},
-  pdf={https://arxiv.org/pdf/2511.12008},
-  code={https://github.com/yq-hong/RECAP-PATH},
+  title={When Distance Distracts: Representation Distance Bias in BT-Loss for Reward Models},
+  author={Xie, Tong and Bai, Andrew and Ban, Yuanhao and Hong, Yunqi and Li, Haoyu and Hsieh, Cho-jui},
+  journal={arXiv preprint arXiv:2512.06343},
+  pdf={https://arxiv.org/pdf/2512.06343},
   year={2025},
-  preview={pathology.png},
-  abstract={AI tools in pathology have improved screening throughput, standardized quantification, and revealed prognostic patterns that inform treatment. However, adoption remains limited because most systems still lack the human-readable reasoning needed to audit decisions and prevent errors. We present RECAP-PATH, an interpretable framework that establishes a self-learning paradigm, shifting off-the-shelf multimodal large language models from passive pattern recognition to evidence-linked diagnostic reasoning. At its core is a two-phase learning process that autonomously derives diagnostic criteria: diversification expands pathology-style explanations, while optimization refines them for accuracy. This self-learning approach requires only small labeled sets and no white-box access or weight updates to generate cancer diagnoses. Evaluated on breast and prostate datasets, RECAP-PATH produced rationales aligned with expert assessment and delivered substantial gains in diagnostic accuracy over baselines. By uniting visual understanding with reasoning, RECAP-PATH provides clinically trustworthy AI and demonstrates a generalizable path toward evidence-linked interpretation.},
+  preview={NormBT.png},
+  abstract={Reward models are central to Large Language Model (LLM) alignment within the framework of RLHF. The standard objective used in reward modeling is the Bradley-Terry (BT) loss, which learns from pairwise data consisting of a pair of chosen and rejected responses. In this work, we analyze the per-sample gradient of BT-loss and show that its norm scales with two distinct components: (1) the difference in predicted rewards between chosen and rejected responses, which reflects the prediction error, and critically, (2) representation distance between the pair measured in the output space of the final layer. While the first term captures the intended training signal, we show that the second term can significantly impact the update magnitude and misalign learning. Specifically, pairs with small representation distance often receive vanishingly weak updates, even when misranked, while pairs with large distance receive disproportionately strong updates. This leads to gradients from large-distance pairs to overshadow those from small-distance pairs, where fine-grained distinctions are especially important. To overcome this limitation, we propose NormBT, an adaptive pair-wise normalization scheme that balances representation-driven effects and focuses learning signals on prediction error. NormBT is a lightweight, drop-in integration to BT loss with negligible overhead. Across various LLM backbones and datasets, NormBT improves reward model performance consistently, with notable gains of over 5 precent on the Reasoning category of RewardBench, which contains numerous small-distance pairs. This work reveals a key limitation in the widely used BT objective and provides a simple, effective correction.},
   selected={true}
 }
 
