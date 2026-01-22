@@ -21,16 +21,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-our-paper-on-boosting-fine-grained-zero-shot-performance-of-mllms-with-unlabeled-data-has-been-accepted-at-neurips-2025",
+          title: 'Our paper on boosting fine-grained zero-shot performance of MLLMs with unlabeled data has...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-check-out-our-paper-on-intrinsic-reward-image-synthesis-showing-how-rl-with-intrinsic-rewards-alone-can-improve-text-to-image-generation",
+          title: 'Check out our paper on Intrinsic Reward Image Synthesis, showing how RL with...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-our-new-paper-understanding-reward-hacking-in-text-to-image-reinforcement-learning-is-out-uncovering-how-reward-design-leads-to-artifact-exploitation-in-t2i-rl-code-will-be-released-soon",
+          title: 'Our new paper Understanding Reward Hacking in Text-to-Image Reinforcement Learning is out, uncovering...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
