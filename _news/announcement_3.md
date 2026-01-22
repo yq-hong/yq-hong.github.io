@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2025-09-29 07:59:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Check out our paper on [Intrinsic Reward Image Synthesis](https://arxiv.org/abs/2509.25562), showing how RL with intrinsic rewards alone can improve text-to-image generation.
