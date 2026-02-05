@@ -27,7 +27,7 @@ ninja.data = [{
           section: "News",},{id: "news-check-out-our-paper-on-intrinsic-reward-image-synthesis-showing-how-rl-with-intrinsic-rewards-alone-can-improve-text-to-image-generation",
           title: 'Check out our paper on Intrinsic Reward Image Synthesis, showing how RL with...',
           description: "",
-          section: "News",},{id: "news-our-new-paper-understanding-reward-hacking-in-text-to-image-reinforcement-learning-is-out-uncovering-how-reward-design-leads-to-artifact-exploitation-in-t2i-rl-code-will-be-released-soon",
+          section: "News",},{id: "news-our-new-paper-understanding-reward-hacking-in-text-to-image-reinforcement-learning-is-out-uncovering-how-reward-design-leads-to-artifact-exploitation-in-t2i-rl-code-is-available-on-github",
           title: 'Our new paper Understanding Reward Hacking in Text-to-Image Reinforcement Learning is out, uncovering...',
           description: "",
           section: "News",},{id: "projects-project-1",
