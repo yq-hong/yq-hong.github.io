@@ -13,6 +13,30 @@
   selected={true}
 }
 
+@article{chen2025iris,
+  abbr={Preprint},
+  title={IRIS: Intrinsic Reward Image Synthesis},
+  author={Chen, Yihang and Ban, Yuanhao and Hong, Yunqi and Hsieh, Cho-Jui},
+  journal={arXiv preprint arXiv:2509.25562},
+  pdf={https://arxiv.org/pdf/2509.25562},
+  year={2025},
+  preview={intro.png},
+  abstract={Despite the success of Reinforcement Learning from Human Feedback (RLHF) in language reasoning, its application to autoregressive Text-to-Image (T2I) generation is often constrained by the limited availability of human preference data. This paper explores how an autoregressive T2I model can learn from internal signals without relying on external rewards or labeled data. Contrary to recent findings in text generation, we show that maximizing self-uncertainty, rather than self-certainty, improves image generation. We observe that this is because autoregressive T2I models with low uncertainty tend to generate simple and uniform images, which are less aligned with human preferences. Based on these observations, we propose IRIS (Intrinsic Reward Image Synthesis), the first framework to improve autoregressive T2I models with reinforcement learning using only an intrinsic reward. Empirical results demonstrate that applying IRIS to autoregressive T2I models achieves performance that is competitive with or superior to external rewards.},
+  selected={true}
+}
+
+@article{xie2025distance,
+  abbr={Preprint},
+  title={When Distance Distracts: Representation Distance Bias in BT-Loss for Reward Models},
+  author={Xie, Tong and Bai, Andrew and Ban, Yuanhao and Hong, Yunqi and Li, Haoyu and Hsieh, Cho-jui},
+  journal={arXiv preprint arXiv:2512.06343},
+  pdf={https://arxiv.org/pdf/2512.06343},
+  year={2025},
+  preview={NormBT.png},
+  abstract={Reward models are central to Large Language Model (LLM) alignment within the framework of RLHF. The standard objective used in reward modeling is the Bradley-Terry (BT) loss, which learns from pairwise data consisting of a pair of chosen and rejected responses. In this work, we analyze the per-sample gradient of BT-loss and show that its norm scales with two distinct components: (1) the difference in predicted rewards between chosen and rejected responses, which reflects the prediction error, and critically, (2) representation distance between the pair measured in the output space of the final layer. While the first term captures the intended training signal, we show that the second term can significantly impact the update magnitude and misalign learning. Specifically, pairs with small representation distance often receive vanishingly weak updates, even when misranked, while pairs with large distance receive disproportionately strong updates. This leads to gradients from large-distance pairs to overshadow those from small-distance pairs, where fine-grained distinctions are especially important. To overcome this limitation, we propose NormBT, an adaptive pair-wise normalization scheme that balances representation-driven effects and focuses learning signals on prediction error. NormBT is a lightweight, drop-in integration to BT loss with negligible overhead. Across various LLM backbones and datasets, NormBT improves reward model performance consistently, with notable gains of over 5 precent on the Reasoning category of RewardBench, which contains numerous small-distance pairs. This work reveals a key limitation in the widely used BT objective and provides a simple, effective correction.},
+  selected={true}
+}
+
 @article{hong2025unlabeled,
   abbr={NeurIPS 2025},
   title={Unlabeled Data Improves Fine-Grained Image Zero-shot Classification with Multimodal LLMs},
@@ -39,30 +63,6 @@
   selected={true}
 }
 
-@article{chen2025iris,
-  abbr={Preprint},
-  title={IRIS: Intrinsic Reward Image Synthesis},
-  author={Chen, Yihang and Ban, Yuanhao and Hong, Yunqi and Hsieh, Cho-Jui},
-  journal={arXiv preprint arXiv:2509.25562},
-  pdf={https://arxiv.org/pdf/2509.25562},
-  year={2025},
-  preview={intro.png},
-  abstract={Despite the success of Reinforcement Learning from Human Feedback (RLHF) in language reasoning, its application to autoregressive Text-to-Image (T2I) generation is often constrained by the limited availability of human preference data. This paper explores how an autoregressive T2I model can learn from internal signals without relying on external rewards or labeled data. Contrary to recent findings in text generation, we show that maximizing self-uncertainty, rather than self-certainty, improves image generation. We observe that this is because autoregressive T2I models with low uncertainty tend to generate simple and uniform images, which are less aligned with human preferences. Based on these observations, we propose IRIS (Intrinsic Reward Image Synthesis), the first framework to improve autoregressive T2I models with reinforcement learning using only an intrinsic reward. Empirical results demonstrate that applying IRIS to autoregressive T2I models achieves performance that is competitive with or superior to external rewards.},
-  selected={true}
-}
-
-@article{xie2025distance,
-  abbr={Preprint},
-  title={When Distance Distracts: Representation Distance Bias in BT-Loss for Reward Models},
-  author={Xie, Tong and Bai, Andrew and Ban, Yuanhao and Hong, Yunqi and Li, Haoyu and Hsieh, Cho-jui},
-  journal={arXiv preprint arXiv:2512.06343},
-  pdf={https://arxiv.org/pdf/2512.06343},
-  year={2025},
-  preview={NormBT.png},
-  abstract={Reward models are central to Large Language Model (LLM) alignment within the framework of RLHF. The standard objective used in reward modeling is the Bradley-Terry (BT) loss, which learns from pairwise data consisting of a pair of chosen and rejected responses. In this work, we analyze the per-sample gradient of BT-loss and show that its norm scales with two distinct components: (1) the difference in predicted rewards between chosen and rejected responses, which reflects the prediction error, and critically, (2) representation distance between the pair measured in the output space of the final layer. While the first term captures the intended training signal, we show that the second term can significantly impact the update magnitude and misalign learning. Specifically, pairs with small representation distance often receive vanishingly weak updates, even when misranked, while pairs with large distance receive disproportionately strong updates. This leads to gradients from large-distance pairs to overshadow those from small-distance pairs, where fine-grained distinctions are especially important. To overcome this limitation, we propose NormBT, an adaptive pair-wise normalization scheme that balances representation-driven effects and focuses learning signals on prediction error. NormBT is a lightweight, drop-in integration to BT loss with negligible overhead. Across various LLM backbones and datasets, NormBT improves reward model performance consistently, with notable gains of over 5 precent on the Reasoning category of RewardBench, which contains numerous small-distance pairs. This work reveals a key limitation in the widely used BT objective and provides a simple, effective correction.},
-  selected={true}
-}
-
 @inproceedings{kao2025qg,
   abbr={EMNLP 2025},
   title={QG-CoC: Question-Guided Chain-of-Captions for Large Multimodal Models},
@@ -76,6 +76,19 @@
   preview={qgcoc_pipeline.png},
   abstract={Recently, Multimodal Large Language Models (MLLMs) encounter two key issues in multi-image contexts: (1) a lack of fine-grained perception across disparate images, and (2) a diminished capability to effectively reason over and synthesize information from multiple visual inputs. However, while various prompting methods aim to describe visual content, many existing studies focus primarily on single-image settings or specific, constrained scenarios. This leaves a critical gap in understanding and addressing how MLLMs tackle more general and complex multi-image reasoning tasks. Thus, we first extensively investigate how current prompting methods perceive fine-grained visual details and process visual information when dealing with multiple images. Our findings reveal that existing prompting methods fall short in attending to needed clues and seamlessly integrating perception and reasoning. Inspired by the findings, we propose a new zero-shot prompting method, Question-Guided Chain-of-Captions (QG-CoC), a generalized prompting approach that effectively handles problems with an arbitrary number of images. We evaluate our method on various open-source and closed-source MLLMs for multi-image and single-image benchmarks. Experimental results indicate that QG-CoC demonstrates competitive performance across tasks and exhibits robust improvements in the challenging scenarios where existing prompting methods fail.},
   selected={true}
+}
+
+@article{lo2026mechanistic,
+  abbr={Preprint},
+  title={Mechanistic Language Modeling and Oxygenated 3D Screening Reveal Berberine and Enzalutamide Synergy in Resistant Prostate Cancer},
+  author={Lo, Chih-Hui and Shi, Katie and Kafadarian, Lina and Bermudez, Alexandra and Diaz, Johnny and Edwards, Liam and Hong, Yunqi and Chen, Ziyi and Hwang, Hyeonji and Yan, Weihong and others},
+  journal={bioRxiv},
+  pages={2026--01},
+  pdf={https://www.biorxiv.org/content/biorxiv/early/2026/01/26/2026.01.24.701539.full.pdf},
+  year={2026},
+  preview={llm_drug.png},
+  abstract={Resistance to androgen receptor inhibitors remains a primary challenge in prostate cancer treatment, yet identifying synergistic co-therapies is hindered by immense combinatorial search spaces and the limited interpretability of predictive computation models. Here, we developed an integrated discovery-validation axis coupling knowledge-augmented large language models with oxygen-supplemented 3D spheroid assays. By leveraging inherent model stochasticity, our framework measures the degree of consensus across independent predictions to establish a formal metric for predictive accuracy. This principle enables high-throughput assessment of complex signaling crosstalk, yielding mechanistic rationales for all predictions and defining a high-confidence zone that minimizes experimental attrition. Utilizing this approach to screen 3,592 natural products, we identified a previously unrecognized synergy between berberine and enzalutamide that re-sensitizes resistant cells. Validation confirms that berberine perturbs the PI3K/AKT/mTOR and AMPK axes, a finding consistent with the mechanistic rationales computationally derived by the framework. Integrating interpretable AI with physiologically relevant 3D screening provides a scalable methodology for the rational discovery of synergistic therapies.},
+  publisher={Cold Spring Harbor Laboratory}
 }
 
 @article{yang2025uncertainty,

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our new paper [Understanding Reward Hacking in Text-to-Image Reinforcement Learning](https://arxiv.org/abs/2601.03468) is out, uncovering how reward design leads to artifact exploitation in T2I RL; code will be released soon.
+Our new paper [Understanding Reward Hacking in Text-to-Image Reinforcement Learning](https://arxiv.org/abs/2601.03468) is out, uncovering how reward design leads to artifact exploitation in T2I RL; code is available on [Github](https://github.com/yq-hong/ArtifactReward).

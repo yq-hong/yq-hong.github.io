@@ -34,8 +34,8 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 
 I am a second-year PhD student in the [Computer Science Department at UCLA](https://www.cs.ucla.edu/), advised by [Prof. Cho-Jui Hsieh](https://web.cs.ucla.edu/~chohsieh/).
 
-My research focuses on LLM post-training, inferencing, and downstream applications. I am currently working on `LLM reinforcement learning`, `reward modeling`, and `text-to-image generation`. Previously, I explored topics in LLM automatic prompt optimization, model interpretability, scalable graph adversarial attacks, graph representation learning, and recommender systems.
+My research focuses on `post-training` and `self-improvement` of large language and multimodal models. I am currently working on `LLM reinforcement learning`, `reward modeling`, and `text-to-image generation`. I am particularly interested in understanding and mitigating failure modes in optimization, such as reward hacking, distribution shift, and evaluation bias, and in designing scalable methods that improve model performance using limited or unlabeled data. Previously, I explored topics in LLM automatic prompt optimization, model interpretability, scalable graph adversarial attacks, graph representation learning, and recommender systems.
 
-I also collaborate with [Prof. Neil Y.C. Lin](https://www.linlab.seas.ucla.edu/) on developing LLM-driven methods for biomedical research.
+I also collaborate with [Prof. Neil Y.C. Lin](https://www.linlab.seas.ucla.edu/) on interdisciplinary projects, including applying LLM-driven methods to biomedical research.
 
 🙌 I’m actively looking for research internships for Summer 2026. Feel free to reach out if you are interested.
