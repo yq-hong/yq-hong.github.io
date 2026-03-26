@@ -2,26 +2,15 @@
 ---
 
 @article{hong2026understanding,
-  abbr={Preprint},
+  abbr={CVPR 2026},
   title={Understanding Reward Hacking in Text-to-Image Reinforcement Learning},
   author={Hong, Yunqi and Kao, Kuei-Chun and Zhou, Hengguang and Hsieh, Cho-Jui},
-  journal={arXiv preprint arXiv:2601.03468},
+  journal={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pdf={https://arxiv.org/pdf/2601.03468},
+  code={https://github.com/yq-hong/ArtifactReward},
   year={2026},
   preview={t2i_reward.png},
   abstract={Reinforcement learning (RL) has become a standard approach for post-training large language models and, more recently, for improving image generation models, which uses reward functions to enhance generation quality and human preference alignment. However, existing reward designs are often imperfect proxies for true human judgment, making models prone to reward hacking--producing unrealistic or low-quality images that nevertheless achieve high reward scores. In this work, we systematically analyze reward hacking behaviors in text-to-image (T2I) RL post-training. We investigate how both aesthetic/human preference rewards and prompt-image consistency rewards individually contribute to reward hacking and further show that ensembling multiple rewards can only partially mitigate this issue. Across diverse reward models, we identify a common failure mode: the generation of artifact-prone images. To address this, we propose a lightweight and adaptive artifact reward model, trained on a small curated dataset of artifact-free and artifact-containing samples. This model can be integrated into existing RL pipelines as an effective regularizer for commonly used reward models. Experiments demonstrate that incorporating our artifact reward significantly improves visual realism and reduces reward hacking across multiple T2I RL setups, demonstrating the effectiveness of lightweight reward augment serving as a safeguard against reward hacking.},
-  selected={true}
-}
-
-@article{chen2025iris,
-  abbr={Preprint},
-  title={IRIS: Intrinsic Reward Image Synthesis},
-  author={Chen, Yihang and Ban, Yuanhao and Hong, Yunqi and Hsieh, Cho-Jui},
-  journal={arXiv preprint arXiv:2509.25562},
-  pdf={https://arxiv.org/pdf/2509.25562},
-  year={2025},
-  preview={intro.png},
-  abstract={Despite the success of Reinforcement Learning from Human Feedback (RLHF) in language reasoning, its application to autoregressive Text-to-Image (T2I) generation is often constrained by the limited availability of human preference data. This paper explores how an autoregressive T2I model can learn from internal signals without relying on external rewards or labeled data. Contrary to recent findings in text generation, we show that maximizing self-uncertainty, rather than self-certainty, improves image generation. We observe that this is because autoregressive T2I models with low uncertainty tend to generate simple and uniform images, which are less aligned with human preferences. Based on these observations, we propose IRIS (Intrinsic Reward Image Synthesis), the first framework to improve autoregressive T2I models with reinforcement learning using only an intrinsic reward. Empirical results demonstrate that applying IRIS to autoregressive T2I models achieves performance that is competitive with or superior to external rewards.},
   selected={true}
 }
 
@@ -34,6 +23,18 @@
   year={2025},
   preview={NormBT.png},
   abstract={Reward models are central to Large Language Model (LLM) alignment within the framework of RLHF. The standard objective used in reward modeling is the Bradley-Terry (BT) loss, which learns from pairwise data consisting of a pair of chosen and rejected responses. In this work, we analyze the per-sample gradient of BT-loss and show that its norm scales with two distinct components: (1) the difference in predicted rewards between chosen and rejected responses, which reflects the prediction error, and critically, (2) representation distance between the pair measured in the output space of the final layer. While the first term captures the intended training signal, we show that the second term can significantly impact the update magnitude and misalign learning. Specifically, pairs with small representation distance often receive vanishingly weak updates, even when misranked, while pairs with large distance receive disproportionately strong updates. This leads to gradients from large-distance pairs to overshadow those from small-distance pairs, where fine-grained distinctions are especially important. To overcome this limitation, we propose NormBT, an adaptive pair-wise normalization scheme that balances representation-driven effects and focuses learning signals on prediction error. NormBT is a lightweight, drop-in integration to BT loss with negligible overhead. Across various LLM backbones and datasets, NormBT improves reward model performance consistently, with notable gains of over 5 precent on the Reasoning category of RewardBench, which contains numerous small-distance pairs. This work reveals a key limitation in the widely used BT objective and provides a simple, effective correction.},
+  selected={true}
+}
+
+@article{chen2025iris,
+  abbr={Preprint},
+  title={IRIS: Intrinsic Reward Image Synthesis},
+  author={Chen, Yihang and Ban, Yuanhao and Hong, Yunqi and Hsieh, Cho-Jui},
+  journal={arXiv preprint arXiv:2509.25562},
+  pdf={https://arxiv.org/pdf/2509.25562},
+  year={2025},
+  preview={intro.png},
+  abstract={Despite the success of Reinforcement Learning from Human Feedback (RLHF) in language reasoning, its application to autoregressive Text-to-Image (T2I) generation is often constrained by the limited availability of human preference data. This paper explores how an autoregressive T2I model can learn from internal signals without relying on external rewards or labeled data. Contrary to recent findings in text generation, we show that maximizing self-uncertainty, rather than self-certainty, improves image generation. We observe that this is because autoregressive T2I models with low uncertainty tend to generate simple and uniform images, which are less aligned with human preferences. Based on these observations, we propose IRIS (Intrinsic Reward Image Synthesis), the first framework to improve autoregressive T2I models with reinforcement learning using only an intrinsic reward. Empirical results demonstrate that applying IRIS to autoregressive T2I models achieves performance that is competitive with or superior to external rewards.},
   selected={true}
 }
 
@@ -51,13 +52,14 @@
 }
 
 @article{hong2025adaptive,
-  abbr={Preprint},
+  abbr={Communications Medicine},
   title={Adaptive Diagnostic Reasoning Framework for Pathology with Multimodal Large Language Models},
   author={Hong, Yunqi and Kao, Johnson and Edwards, Liam and Liu, Nein-Tzu and Huang, Chung-Yen and Oliveira-Kowaleski, Alex and Hsieh, Cho-Jui and Lin, Neil YC},
   journal={arXiv preprint arXiv:2511.12008},
   pdf={https://arxiv.org/pdf/2511.12008},
   code={https://github.com/yq-hong/RECAP-PATH},
   year={2025},
+  html={https://www.nature.com/articles/s43856-026-01491-z},
   preview={pathology.png},
   abstract={AI tools in pathology have improved screening throughput, standardized quantification, and revealed prognostic patterns that inform treatment. However, adoption remains limited because most systems still lack the human-readable reasoning needed to audit decisions and prevent errors. We present RECAP-PATH, an interpretable framework that establishes a self-learning paradigm, shifting off-the-shelf multimodal large language models from passive pattern recognition to evidence-linked diagnostic reasoning. At its core is a two-phase learning process that autonomously derives diagnostic criteria: diversification expands pathology-style explanations, while optimization refines them for accuracy. This self-learning approach requires only small labeled sets and no white-box access or weight updates to generate cancer diagnoses. Evaluated on breast and prostate datasets, RECAP-PATH produced rationales aligned with expert assessment and delivered substantial gains in diagnostic accuracy over baselines. By uniting visual understanding with reasoning, RECAP-PATH provides clinically trustworthy AI and demonstrates a generalizable path toward evidence-linked interpretation.},
   selected={true}
