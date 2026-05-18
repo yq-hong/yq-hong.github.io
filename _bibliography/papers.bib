@@ -15,14 +15,28 @@
 }
 
 @article{xie2025distance,
-  abbr={Preprint},
+  abbr={ICML 2026},
   title={When Distance Distracts: Representation Distance Bias in BT-Loss for Reward Models},
   author={Xie, Tong and Bai, Andrew and Ban, Yuanhao and Hong, Yunqi and Li, Haoyu and Hsieh, Cho-jui},
-  journal={arXiv preprint arXiv:2512.06343},
+  journal={International Conference on Machine Learning},
   pdf={https://arxiv.org/pdf/2512.06343},
-  year={2025},
+  year={2026},
   preview={NormBT.png},
   abstract={Reward models are central to Large Language Model (LLM) alignment within the framework of RLHF. The standard objective used in reward modeling is the Bradley-Terry (BT) loss, which learns from pairwise data consisting of a pair of chosen and rejected responses. In this work, we analyze the per-sample gradient of BT-loss and show that its norm scales with two distinct components: (1) the difference in predicted rewards between chosen and rejected responses, which reflects the prediction error, and critically, (2) representation distance between the pair measured in the output space of the final layer. While the first term captures the intended training signal, we show that the second term can significantly impact the update magnitude and misalign learning. Specifically, pairs with small representation distance often receive vanishingly weak updates, even when misranked, while pairs with large distance receive disproportionately strong updates. This leads to gradients from large-distance pairs to overshadow those from small-distance pairs, where fine-grained distinctions are especially important. To overcome this limitation, we propose NormBT, an adaptive pair-wise normalization scheme that balances representation-driven effects and focuses learning signals on prediction error. NormBT is a lightweight, drop-in integration to BT loss with negligible overhead. Across various LLM backbones and datasets, NormBT improves reward model performance consistently, with notable gains of over 5 precent on the Reasoning category of RewardBench, which contains numerous small-distance pairs. This work reveals a key limitation in the widely used BT objective and provides a simple, effective correction.},
+  selected={true}
+}
+
+@article{hong2025unlabeled,
+  abbr={NeurIPS 2025},
+  title={Unlabeled Data Improves Fine-Grained Image Zero-shot Classification with Multimodal LLMs},
+  author={Hong, Yunqi and An, Sohyun and Bai, Andrew and Lin, Neil YC and Hsieh, Cho-Jui},
+  journal={Advances in Neural Information Processing Systems},
+  pdf={https://arxiv.org/pdf/2506.03195},
+  code={https://github.com/yq-hong/AutoSEP},
+  year={2025},
+  html={https://proceedings.neurips.cc/paper_files/paper/2025/hash/6b7f9d9c1217a748391800871ff7d17d-Abstract-Conference.html},
+  preview={black_cuckoo.png},
+  abstract={Despite Multimodal Large Language Models (MLLMs) showing promising results on general zero-shot image classification tasks, fine-grained image classification remains challenging. It demands precise attention to subtle visual details to distinguish between visually similar subcategories--details that MLLMs may easily overlook without explicit guidance. To address this, we introduce AutoSEP, an iterative self-supervised prompt learning framework designed to enhance MLLM fine-grained classification capabilities in a fully unsupervised manner. Our core idea is to leverage unlabeled data to learn a description prompt that guides MLLMs in identifying crucial discriminative features within an image, and boosts classification accuracy. We developed an automatic self-enhancing prompt learning framework called AutoSEP to iteratively improve the description prompt using unlabeled data, based on instance-level classification scoring function. AutoSEP only requires black-box access to MLLMs, eliminating the need for any training or fine-tuning. We evaluate our approach on multiple fine-grained classification datasets. It consistently outperforms other unsupervised baselines, demonstrating the effectiveness of our self-supervised optimization framework. Notably, AutoSEP on average improves 13 percent over standard zero-shot classification and 5 percent over the best-performing baselines.},
   selected={true}
 }
 
@@ -35,19 +49,6 @@
   year={2025},
   preview={intro.png},
   abstract={Despite the success of Reinforcement Learning from Human Feedback (RLHF) in language reasoning, its application to autoregressive Text-to-Image (T2I) generation is often constrained by the limited availability of human preference data. This paper explores how an autoregressive T2I model can learn from internal signals without relying on external rewards or labeled data. Contrary to recent findings in text generation, we show that maximizing self-uncertainty, rather than self-certainty, improves image generation. We observe that this is because autoregressive T2I models with low uncertainty tend to generate simple and uniform images, which are less aligned with human preferences. Based on these observations, we propose IRIS (Intrinsic Reward Image Synthesis), the first framework to improve autoregressive T2I models with reinforcement learning using only an intrinsic reward. Empirical results demonstrate that applying IRIS to autoregressive T2I models achieves performance that is competitive with or superior to external rewards.},
-  selected={true}
-}
-
-@article{hong2025unlabeled,
-  abbr={NeurIPS 2025},
-  title={Unlabeled Data Improves Fine-Grained Image Zero-shot Classification with Multimodal LLMs},
-  author={Hong, Yunqi and An, Sohyun and Bai, Andrew and Lin, Neil YC and Hsieh, Cho-Jui},
-  journal={Advances in Neural Information Processing Systems},
-  pdf={https://arxiv.org/pdf/2506.03195},
-  code={https://github.com/yq-hong/AutoSEP},
-  year={2025},
-  preview={black_cuckoo.png},
-  abstract={Despite Multimodal Large Language Models (MLLMs) showing promising results on general zero-shot image classification tasks, fine-grained image classification remains challenging. It demands precise attention to subtle visual details to distinguish between visually similar subcategories--details that MLLMs may easily overlook without explicit guidance. To address this, we introduce AutoSEP, an iterative self-supervised prompt learning framework designed to enhance MLLM fine-grained classification capabilities in a fully unsupervised manner. Our core idea is to leverage unlabeled data to learn a description prompt that guides MLLMs in identifying crucial discriminative features within an image, and boosts classification accuracy. We developed an automatic self-enhancing prompt learning framework called AutoSEP to iteratively improve the description prompt using unlabeled data, based on instance-level classification scoring function. AutoSEP only requires black-box access to MLLMs, eliminating the need for any training or fine-tuning. We evaluate our approach on multiple fine-grained classification datasets. It consistently outperforms other unsupervised baselines, demonstrating the effectiveness of our self-supervised optimization framework. Notably, AutoSEP on average improves 13 percent over standard zero-shot classification and 5 percent over the best-performing baselines.},
   selected={true}
 }
 
