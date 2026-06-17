@@ -1,6 +1,20 @@
 ---
 ---
 
+@article{xie2026targetsft,
+  abbr={Preprint},
+  title={A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design},
+  author={Xie, Tong and Ban, Yuanhao and Hong, Yunqi and An, Sohyun and Chen, Yihang and Hsieh, Cho-Jui},
+  journal={arXiv preprint arXiv:2606.11189},
+  pdf={https://arxiv.org/abs/2606.11189},
+  code={https://github.com/txie1/Target-SFT},
+  year={2026},
+  html={https://txie1.github.io/Target-SFT/},
+  preview={target_sft.png},
+  abstract={Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. Strictly fitting toward this one-hot target may be suboptimal, especially when the pretrained model encodes a rich knowledge prior. In this work, we reinterpret SFT as target distribution design: instead of studying only the loss objective, we analyze the token-level target that the loss drives the model to match. We introduce the Q-target framework, which decomposes SFT supervision into two explicit choices: (1) how strongly to rely on the observed token, and (2) how to allocate the remaining probability mass over alternatives. This perspective unifies many existing SFT variants as implicit choices of the target distribution Q. Building on this view, we propose Target-SFT which constructs the training objective directly from the desired target distribution. This method consistently outperforms across the ten reasoning dataset-model settings evaluated, showing the effectiveness of this target-based approach. Overall, our formulation reveals a more fundamental design principle for SFT training and opens a broader search space for SFT objectives.},
+  selected={true}
+}
+
 @article{hong2026understanding,
   abbr={CVPR 2026},
   title={Understanding Reward Hacking in Text-to-Image Reinforcement Learning},
@@ -21,6 +35,7 @@
   author={Xie, Tong and Bai, Andrew and Ban, Yuanhao and Hong, Yunqi and Li, Haoyu and Hsieh, Cho-jui},
   journal={International Conference on Machine Learning},
   pdf={https://arxiv.org/pdf/2512.06343},
+  code={https://github.com/txie1/NormBT},
   year={2026},
   preview={NormBT.png},
   abstract={Reward models are central to Large Language Model (LLM) alignment within the framework of RLHF. The standard objective used in reward modeling is the Bradley-Terry (BT) loss, which learns from pairwise data consisting of a pair of chosen and rejected responses. In this work, we analyze the per-sample gradient of BT-loss and show that its norm scales with two distinct components: (1) the difference in predicted rewards between chosen and rejected responses, which reflects the prediction error, and critically, (2) representation distance between the pair measured in the output space of the final layer. While the first term captures the intended training signal, we show that the second term can significantly impact the update magnitude and misalign learning. Specifically, pairs with small representation distance often receive vanishingly weak updates, even when misranked, while pairs with large distance receive disproportionately strong updates. This leads to gradients from large-distance pairs to overshadow those from small-distance pairs, where fine-grained distinctions are especially important. To overcome this limitation, we propose NormBT, an adaptive pair-wise normalization scheme that balances representation-driven effects and focuses learning signals on prediction error. NormBT is a lightweight, drop-in integration to BT loss with negligible overhead. Across various LLM backbones and datasets, NormBT improves reward model performance consistently, with notable gains of over 5 precent on the Reasoning category of RewardBench, which contains numerous small-distance pairs. This work reveals a key limitation in the widely used BT objective and provides a simple, effective correction.},
