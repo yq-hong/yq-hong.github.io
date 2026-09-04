@@ -1,12 +1,26 @@
 ---
 ---
 
+@article{ban2026arena,
+  abbr={Preprint},
+  title={Arena-T2I Hard: Benchmarking and Improving Faithfulness with Dependency-Aware Checklist},
+  author={Ban, Yuanhao and Xie, Tong and An, Sohyun and Hong, Yunqi and Frick, Evan and Hsu, I and Chiang, Wei-Lin and Stoica, Ion and Hsieh, Cho-Jui and others},
+  journal={arXiv preprint arXiv:2606.31711},
+  pdf={https://arxiv.org/pdf/2606.31711},
+  code={https://github.com/banyuanhao/Arena-T2I-Hard},
+  year={2026},
+  html={https://banyuanhao.github.io/Arena-T2I-Hard-Page/},
+  preview={arena.png},
+  abstract={Faithfulness -- how precisely a generated image aligns with its prompt -- is increasingly central to the real-world utility of text-to-image (T2I) models. Existing faithfulness benchmarks, however, rely on simple atomic instructions, on which top-tier systems already achieve near-perfect scores. As T2I models enter creative workflows, users issue multi-faceted requests combining intricate spatial relationships, stylistic constraints, and complex text rendering. In this setting, a single binary VLM-judge score no longer captures which specific constraints the model fails to satisfy. We introduce Arena-T2I Hard, a 310-prompt stress benchmark drawn from real arena T2I logs, with approximately 30 decomposed yes/no constraints per prompt spanning six categories, including text rendering. The strongest closed-source system we evaluate reaches 0.855 with a 33~pp performance gap across 11 systems, demonstrating substantial discriminative power. Moreover, high public-arena rankings fail to predict faithfulness, confirming that holistic Bradley-Terry (BT) preference scores prioritize aesthetics over fine-grained prompt adherence. We propose a dependency-aware checklist reward that decomposes each prompt into a DAG of yes/no questions and zeroes descendants of failed parents, turning faithfulness into a per-constraint training signal. Combined with a BT aesthetic reward via group-decoupled normalization (GDPO), which standardizes each reward within its rollout group so neither collapses, the recipe attains a strictly better faithfulness-aesthetics trade-off on SD3.5-Medium and FLUX.1-dev under MMRB2 pairwise comparisons than every single-reward, naive weighted-sum, or 4-reward BT-ensemble baseline.},
+  selected={true}
+}
+
 @article{xie2026targetsft,
   abbr={Preprint},
   title={A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design},
   author={Xie, Tong and Ban, Yuanhao and Hong, Yunqi and An, Sohyun and Chen, Yihang and Hsieh, Cho-Jui},
   journal={arXiv preprint arXiv:2606.11189},
-  pdf={https://arxiv.org/abs/2606.11189},
+  pdf={https://arxiv.org/pdf/2606.11189},
   code={https://github.com/txie1/Target-SFT},
   year={2026},
   html={https://txie1.github.io/Target-SFT/},
@@ -24,6 +38,7 @@
   code={https://github.com/yq-hong/ArtifactReward},
   poster={poster_ArtifactReward.pdf},
   year={2026},
+  html={https://openaccess.thecvf.com/content/CVPR2026F/html/Hong_Understanding_Reward_Hacking_in_Text-to-Image_Reinforcement_Learning_CVPRF_2026_paper.html},
   preview={t2i_reward.png},
   abstract={Reinforcement learning (RL) has become a standard approach for post-training large language models and, more recently, for improving image generation models, which uses reward functions to enhance generation quality and human preference alignment. However, existing reward designs are often imperfect proxies for true human judgment, making models prone to reward hacking--producing unrealistic or low-quality images that nevertheless achieve high reward scores. In this work, we systematically analyze reward hacking behaviors in text-to-image (T2I) RL post-training. We investigate how both aesthetic/human preference rewards and prompt-image consistency rewards individually contribute to reward hacking and further show that ensembling multiple rewards can only partially mitigate this issue. Across diverse reward models, we identify a common failure mode: the generation of artifact-prone images. To address this, we propose a lightweight and adaptive artifact reward model, trained on a small curated dataset of artifact-free and artifact-containing samples. This model can be integrated into existing RL pipelines as an effective regularizer for commonly used reward models. Experiments demonstrate that incorporating our artifact reward significantly improves visual realism and reduces reward hacking across multiple T2I RL setups, demonstrating the effectiveness of lightweight reward augment serving as a safeguard against reward hacking.},
   selected={true}
@@ -66,7 +81,6 @@
   year={2025},
   preview={intro.png},
   abstract={Despite the success of Reinforcement Learning from Human Feedback (RLHF) in language reasoning, its application to autoregressive Text-to-Image (T2I) generation is often constrained by the limited availability of human preference data. This paper explores how an autoregressive T2I model can learn from internal signals without relying on external rewards or labeled data. Contrary to recent findings in text generation, we show that maximizing self-uncertainty, rather than self-certainty, improves image generation. We observe that this is because autoregressive T2I models with low uncertainty tend to generate simple and uniform images, which are less aligned with human preferences. Based on these observations, we propose IRIS (Intrinsic Reward Image Synthesis), the first framework to improve autoregressive T2I models with reinforcement learning using only an intrinsic reward. Empirical results demonstrate that applying IRIS to autoregressive T2I models achieves performance that is competitive with or superior to external rewards.},
-  selected={true}
 }
 
 @article{hong2025adaptive,
@@ -95,7 +109,17 @@
   html={https://johnsonkao0213.github.io/QG-CoC},
   preview={qgcoc_pipeline.png},
   abstract={Recently, Multimodal Large Language Models (MLLMs) encounter two key issues in multi-image contexts: (1) a lack of fine-grained perception across disparate images, and (2) a diminished capability to effectively reason over and synthesize information from multiple visual inputs. However, while various prompting methods aim to describe visual content, many existing studies focus primarily on single-image settings or specific, constrained scenarios. This leaves a critical gap in understanding and addressing how MLLMs tackle more general and complex multi-image reasoning tasks. Thus, we first extensively investigate how current prompting methods perceive fine-grained visual details and process visual information when dealing with multiple images. Our findings reveal that existing prompting methods fall short in attending to needed clues and seamlessly integrating perception and reasoning. Inspired by the findings, we propose a new zero-shot prompting method, Question-Guided Chain-of-Captions (QG-CoC), a generalized prompting approach that effectively handles problems with an arbitrary number of images. We evaluate our method on various open-source and closed-source MLLMs for multi-image and single-image benchmarks. Experimental results indicate that QG-CoC demonstrates competitive performance across tasks and exhibits robust improvements in the challenging scenarios where existing prompting methods fail.},
-  selected={true}
+}
+
+@article{chen2026synthesizing,
+  title={Synthesizing Mechanistic Hypotheses from Single-Cell Omics via Discretized Feature Attribution and Empirical Language Model Grounding},
+  author={Chen, Jerry and Hong, Yunqi and Bermudez, Alexandra and Hu, Jimmy and Hsieh, Cho-Jui and Lin, Neil},
+  journal={bioRxiv},
+  pages={2026--07},
+  pdf={https://www.biorxiv.org/content/biorxiv/early/2026/07/10/2026.07.09.737344.full.pdf},
+  year={2026},
+  preview={cell_attr.png},
+  abstract={Single-cell multimodal omics offer unprecedented resolution of cellular networks, yet translating continuous computational attributions into structured, testable biological mechanisms remains a persistent bottleneck. To address this limitation, we introduce an analytical pipeline employing decision trees to discretize continuous neural network attributions into explicit regulatory thresholds. These boundaries then structurally constrain large language models, enabling them to integrate established literature with empirical data to synthesize context-specific hypotheses. Applying this continuous-to-discrete framework across sparse datasets yielded novel biological mechanisms. Specifically, the framework articulated a cytoskeletal gating hierarchy governing EGF-stimulated pathways, identified transcriptomic drivers of input resistance in cortical interneurons, and delineated translational logic predicting Ki-67 abundance within spatial transcriptomics. Retrospective benchmarking validated the framework's capacity to autonomously reconstruct published regulatory logic. Supported by a locally deployable open-weight language model and a code-free interface, this approach establishes an auditable methodology to extract robust experimental hypotheses from high-dimensional single-cell data.},
 }
 
 @article{lo2026mechanistic,
@@ -108,7 +132,6 @@
   year={2026},
   preview={llm_drug.png},
   abstract={Resistance to androgen receptor inhibitors remains a primary challenge in prostate cancer treatment, yet identifying synergistic co-therapies is hindered by immense combinatorial search spaces and the limited interpretability of predictive computation models. Here, we developed an integrated discovery-validation axis coupling knowledge-augmented large language models with oxygen-supplemented 3D spheroid assays. By leveraging inherent model stochasticity, our framework measures the degree of consensus across independent predictions to establish a formal metric for predictive accuracy. This principle enables high-throughput assessment of complex signaling crosstalk, yielding mechanistic rationales for all predictions and defining a high-confidence zone that minimizes experimental attrition. Utilizing this approach to screen 3,592 natural products, we identified a previously unrecognized synergy between berberine and enzalutamide that re-sensitizes resistant cells. Validation confirms that berberine perturbs the PI3K/AKT/mTOR and AMPK axes, a finding consistent with the mechanistic rationales computationally derived by the framework. Integrating interpretable AI with physiologically relevant 3D screening provides a scalable methodology for the rational discovery of synergistic therapies.},
-  publisher={Cold Spring Harbor Laboratory}
 }
 
 @article{yang2025uncertainty,
@@ -121,7 +144,7 @@
   html={https://advanced.onlinelibrary.wiley.com/doi/10.1002/aidi.202600012},
   year={2026},
   preview={adda.png},
-  abstract={Deep learning is transforming microscopy, yet models often fail when applied to images from new instruments or acquisition settings. Conventional adversarial domain adaptation (ADDA) retrains entire networks, often disrupting learned semantic representations. Here, we overturn this paradigm by showing that adapting only the earliest convolutional layers, while freezing deeper layers, yields reliable transfer. Building on this principle, we introduce Subnetwork Image Translation ADDA with automatic depth selection (SIT-ADDA-Auto), a self-configuring framework that integrates shallow-layer adversarial alignment with predictive uncertainty to automatically select adaptation depth without target labels. We demonstrate robustness via multi-metric evaluation, blinded expert assessment, and uncertainty-depth ablations. Across exposure and illumination shifts, cross-instrument transfer, and multiple stains, SIT-ADDA improves reconstruction and downstream segmentation over full-encoder adaptation and non-adversarial baselines, with reduced drift of semantic features. Our results provide a design rule for label-free adaptation in microscopy and a recipe for field settings; the code is publicly available.}
+  abstract={Deep learning is transforming microscopy, yet models often fail when applied to images from new instruments or acquisition settings. Conventional adversarial domain adaptation (ADDA) retrains entire networks, often disrupting learned semantic representations. Here, we overturn this paradigm by showing that adapting only the earliest convolutional layers, while freezing deeper layers, yields reliable transfer. Building on this principle, we introduce Subnetwork Image Translation ADDA with automatic depth selection (SIT-ADDA-Auto), a self-configuring framework that integrates shallow-layer adversarial alignment with predictive uncertainty to automatically select adaptation depth without target labels. We demonstrate robustness via multi-metric evaluation, blinded expert assessment, and uncertainty-depth ablations. Across exposure and illumination shifts, cross-instrument transfer, and multiple stains, SIT-ADDA improves reconstruction and downstream segmentation over full-encoder adaptation and non-adversarial baselines, with reduced drift of semantic features. Our results provide a design rule for label-free adaptation in microscopy and a recipe for field settings; the code is publicly available.},
 }
 
 @article{ye2022graph,
